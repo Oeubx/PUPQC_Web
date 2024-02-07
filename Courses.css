@@ -1,0 +1,109 @@
+h2 {
+    color: maroon;
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+.masteralcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+p{
+    text-align: center;
+    color: #5c5c5c;
+}
+
+.masteralcontainer li {
+    color: maroon;
+    font-size: 35px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.container-main{
+    margin: 50px auto 100px;
+    max-width: 1000px;
+    box-shadow: 0 0 250px lightgoldenrodyellow;
+}
+
+.ctitle{
+    text-align: center;
+}
+
+.container-main {
+    section {
+        background-color: whitesmoke;
+        label {
+            background-color: maroon;
+            cursor: pointer;
+            display: block;
+            padding: 15px 20px;
+            margin: 0;
+            color: white;
+            position: relative;
+            font-size: 22px;
+
+            &::after {
+                content: "📕";
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: darkorange;
+                opacity: 0.5;
+                font-weight: 100;
+                font-size: 16px;
+            }
+        }
+
+        div {
+            color: maroon;
+            max-height: 0;
+            visibility: hidden;
+            overflow: hidden;
+            padding: 0;
+            transition: all 0.8s ease;
+
+            * {
+                opacity: 0;
+                transition: all 0.8s ease;
+            }
+        }
+
+        ul {
+            text-align: center;
+        }
+
+        ul li {
+            display: flex;
+        }
+    }
+
+    input {
+        display: none;
+        
+        &:checked + label + div {
+            max-height: 100vh;
+            visibility: visible;
+            opacity: 1;
+            padding: 0 0;
+
+            * {
+                opacity: 1;
+            }
+        }
+
+        &:checked + label::after {
+            content: " 📖 ";
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .container-main{
+        padding: 50px;
+    }
+}

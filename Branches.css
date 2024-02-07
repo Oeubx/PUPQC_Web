@@ -1,0 +1,100 @@
+/* BRANCHES CSS CHECKED */
+
+.branches {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 75px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.branches h2 {
+    text-align: center;
+    color: black;
+}
+
+.branches ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.branches li {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid gray;
+}
+
+.branches a {
+    text-decoration: none;
+    color: maroon;
+    font-weight: bold;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.branches a:hover {
+    color: darkorange;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: maroon;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submenu p{
+    color: white;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.branches li:hover > .submenu {
+    display: block;
+}
+
+.subsubmenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+    background-color: lightgoldenrodyellow;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subsubmenu li {
+    padding: 10px;
+}
+
+.submenu li:hover > .subsubmenu {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .submenu {
+        position: static;
+        display: block;
+    }
+
+    .subsubmenu {
+        position: static;
+        display: block;
+        margin-left: 0;
+    }
+
+    .branches {
+        margin: 50px 25px;
+    }
+}
